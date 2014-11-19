@@ -14,5 +14,6 @@ class ContributorsAdmin(admin.ModelAdmin):
 
 
 
+
 admin.site.register(Publication,PublicationAdmin)
 admin.site.register(Contributor,ContributorsAdmin)

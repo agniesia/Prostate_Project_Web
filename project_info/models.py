@@ -11,3 +11,10 @@ class Publication(models.Model):
 class Contributor(models.Model):
     names = models.CharField(max_length=30)
     title = models.CharField(max_length=15)
+
+
+
+
+
+
+
