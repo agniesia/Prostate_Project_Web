@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>to jest lista publickacji</h1>
+{% for paper in publications %}
+    <div><h2>{{ paper.title }}</h2></div>
+{% endfor %}
+{% endblock %}

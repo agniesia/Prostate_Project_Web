@@ -11,10 +11,10 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    url(r'^$', 'profiles.views.promo', name='promo'),
+    url(r'^$', 'profiles.views.index', name='index'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r'^project/', include('project_info.urls')),
     # Demo Override the signup form with our own, which includes a
     # institution
     url(r'^accounts/signup/$','userena.views.signup',{'signup_form':SignupFormExtra }),

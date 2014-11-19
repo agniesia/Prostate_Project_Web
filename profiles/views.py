@@ -2,5 +2,5 @@
 from django.shortcuts import render
 
 
-def promo(request):
+def index(request):
     return render(request, 'static\index.html')

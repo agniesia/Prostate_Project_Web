@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>to jest lista uczestników</h1>
+{% for person in contributors %}
+    <div><h2>{{ person.title }}</h2></div>
+{% endfor %}
+{% endblock %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'userena',
     'guardian',
     'easy_thumbnails',
+    'project_info',
 )
 
 MIDDLEWARE_CLASSES = (
