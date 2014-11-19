@@ -49,8 +49,9 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" href="{% url 'Prostate_Project_Web.views.' %} " class="btn btn-success">Sign in</button>
-            <button type="submit" href="{% url 'project_info.views.contact' %} "class="btn btn-success">Sing up</button>
+
+             <a class="btn btn-success" href="{% url 'userena.views.signin' %}" role="button">Sing in </a>
+            <a class="btn btn-success" href="{% url 'userena.views.signup' %}" role="button">Sing up </a>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
