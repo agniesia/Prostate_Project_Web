@@ -1,7 +1,6 @@
 {% load i18n %}{% autoescape off %}{% load url from future %}
 <html>
 <body>
-    <h1>Test message</h1>
     {% if not without_usernames %}<p>{% blocktrans with user.username as username %}Dear {{ username }},</p>{% endblocktrans %}{% endif %}
     {% blocktrans with site.name as site %}<p>Thank you for signing up at {{ site }}.</p>{% endblocktrans %}
     <p>

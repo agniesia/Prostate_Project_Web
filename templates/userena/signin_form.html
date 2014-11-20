@@ -1,0 +1,35 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% load url from future %}
+
+{% block content %}
+
+  <form action="{% url 'userena.views.signin' %}"
+      method="post"
+      role="form"
+      class="form-horizontal">
+    {% csrf_token %}
+    {% bootstrap_form form layout='horizontal' %}
+    {% if next %}
+      <input type="hidden" name="next" value="{{ next }}" />
+    {% else %}
+      <input type="hidden" name="next" value="{% url 'project_info.views.database' %}" />
+    {% endif %}
+    {% buttons %}
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-success">
+            Login
+          </button>
+        </div>
+    {% endbuttons %}
+  </form>
+    <div class="col-sm-offset-2 col-sm-10">
+    <p class="forgot-password" ><a style="color:#449d44 " href="{% url 'userena_password_reset' %}" title="{% trans 'Forgot your password?' %}">{% trans "Forgot your password?" %}</a></p>
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+    </div></div>
+
+
+{% endblock %}
+
+

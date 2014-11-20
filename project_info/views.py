@@ -13,3 +13,6 @@ def publications(request):
 def contact(request):
     list_of_contributors = Contributor.objects.all()
     return render_to_response('project_info/contact.html',{'contributors':list_of_contributors})
+
+def database(request):
+    return render_to_response('project_info/database.html',{})
