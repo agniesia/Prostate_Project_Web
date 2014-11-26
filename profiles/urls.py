@@ -10,5 +10,5 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^accounts/signup/$','userena.views.signup',{'signup_form':SignupFormExtra }),
-    url(r'^accounts/', include('userena.urls')),
+    url(r'^accounts/$', include('userena.urls')),
 )

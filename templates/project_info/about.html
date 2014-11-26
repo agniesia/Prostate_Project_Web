@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% load flatpages %}
+{% get_flatpages '/project/about/' as about_pages %}
 {% block content  %}
-A to nasza historia
+    {{ flatpage.content }}
+    {{ about_pages.title }}
 {% endblock %}

@@ -37,12 +37,19 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.flatpages',
     'profiles',
     'bootstrap3',
     'userena',
     'guardian',
     'easy_thumbnails',
     'project_info',
+    'cookielaw',
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+     'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -54,6 +61,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'userena.middleware.UserenaLocaleMiddleware',
+
+
 )
 
 #for userena configuration

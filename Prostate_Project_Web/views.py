@@ -1,7 +1,7 @@
 __author__ = 'Agnieszka'
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.template import RequestContext
-
+from django.http import  HttpResponse
 
 def handler404(request):
     response = render_to_response('404.html', {},
@@ -21,3 +21,7 @@ def handler400(request):
                                   context_instance=RequestContext(request))
     response.status_code = 400
     return response
+
+def index(request):
+
+    return render(request, 'static\index.html')

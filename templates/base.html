@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load cookielaw_tags %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -32,6 +33,7 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
+        {% cookielaw_banner %}
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -39,7 +41,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
           <a class="navbar-brand" href="#">ZPIASlololo</a>
+
         </div>
            <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -83,7 +87,7 @@
         <div class="col-md-4">
           <h2>Baza Danych</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="{% url 'project_info.views.about' %}" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="{% url 'project_info.views.database' %}" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Publikacje</h2>
@@ -112,6 +116,9 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
+    <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
+
   </body>
 </html>
 
