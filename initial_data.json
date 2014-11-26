@@ -1,0 +1,8 @@
+ [{
+"pk": 1,
+"model": "sites.site",
+"fields": {
+"name": "localhost",
+"domain":"127.0.0.1:8000"
+}
+}]
