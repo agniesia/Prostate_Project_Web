@@ -1,8 +1,10 @@
 {% extends "base.html" %}
-
+{% block content_title %}
+ project
+{% endblock %}
 {% block content %}
 
-<h1>SEGMENTACJA DANYCH TOMOGRAFICZNYCH W ZASTOSOWANIU DO RADIOTERAPII PACJENTÓW Z NOWOTWOREM GRUCZOŁU KROKOWEGO </h1>
+<h2>SEGMENTACJA DANYCH TOMOGRAFICZNYCH W ZASTOSOWANIU DO RADIOTERAPII PACJENTÓW Z NOWOTWOREM GRUCZOŁU KROKOWEGO </h2>
 <p>This is a template  llllfor a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-<p><a class="btn btn-primary btn-lg" href='{% url 'about' %}' role="button">Learn more &raquo;</a></p>
+<p><a class="btn btn-success btn-lg" href='{% url 'about' %}' role="button">Learn more &raquo;</a></p>
 {% endblock %}

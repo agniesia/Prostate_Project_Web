@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^$', 'Prostate_Project_Web.views.index', name='index'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^project/about/$','django.contrib.flatpages.views.flatpage',{'url':'/project/about/'},name='about'),
 
     # Demo Override the signup form with our own, which includes a
     # institution

@@ -1,7 +1,17 @@
 {% extends "base.html" %}
+{% block content_title %}
+Publications' list
+{% endblock %}
 {% block content %}
-<h1>to jest lista publickacji</h1>
+
 {% for paper in publications %}
-    <div><h2>{{ paper.title }}</h2></div>
+    <div class="panel panel-success" >
+        <div class="panel-heading">
+            <a href="#" class="panel-title">{{ paper.title }}</a>
+        </div>
+        <div class="panel-footer">{{ paper.list_of_authors }}</div>
+        <div class="panel-body">{{ paper.newspaper }}</div>
+
+        </div>
 {% endfor %}
 {% endblock %}

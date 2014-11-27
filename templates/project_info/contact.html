@@ -1,7 +1,38 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block content_title %}
+Contributors
+{% endblock %}
 {% block content %}
-<h1>to jest lista uczestników</h1>
-{% for person in contributors %}
-    <div><h2>{{ person.title }}</h2></div>
-{% endfor %}
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="col-lg-4">
+      <!--Sidebar content-->
+            {% for person in contributors %}
+                <div><h5>{{ person.title }} <b>{{ person.names }}</b></h5></div>
+            {% endfor %}
+       </div>
+
+      <div class="col-lg-2">
+
+        <img src="{% static 'img/agh_znk_wbr_rgb_150ppi.jpg' %}" style="width: 100px; height: 100px">
+        <img src="{% static 'img/LOGO ISPAG_v2_crop_FINAL.png' %}" style="width: 100px; height: 100px">
+        <img src="{% static 'img/logo_KMiE_2013_oficjalne_3cm_szarfa.png' %}" style="width: 100px; height: 100px">
+        <img src="{% static 'img/ispag_logo031.png' %}" style="width: 100px; height: 100px">
+        <img src="{% static 'img/ispag_logo031.png' %}" style="width: 100px; height: 100px">
+      </div>
+
+      <div class="col-lg-4">
+      <h2>Contact</h2>
+            <h5>Contact Names:<b> {{ contact_info.contact_name }}</b></h5>
+            <h5>telephone number:<b>{{ contact_info.telephone_number }}</b></h5>
+            <h5>address:<b> {{ contact_info.address}} </b></h5>
+            <h5>project E-mail: <b> {{ contact_info.project_email}} </b></h5>
+            <h5>Institution:<b> {{ contact_info.institutions}} </b></h5>
+            <img src="{% static 'img/map.png' %}" >
+
+      </div>
+  </div>
+</div>
+
 {% endblock %}

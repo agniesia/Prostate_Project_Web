@@ -1,7 +1,11 @@
 {% extends "base.html" %}
-{% load flatpages %}
-{% get_flatpages '/project/about/' as about_pages %}
+{% load staticfiles %}
+
+{% block content_title %}
+    {{ flatpage.title }}
+{% endblock %}
+{
 {% block content  %}
     {{ flatpage.content }}
-    {{ about_pages.title }}
+    <img src="{% static 'img/wizualizacja_dane.png' %}" style="width: 300px;hanging-punctuation: 300px">
 {% endblock %}

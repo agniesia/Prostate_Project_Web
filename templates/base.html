@@ -42,14 +42,14 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">ZPIASlololo</a>
+          <a class="navbar-brand" href="http://ispag.kmet.agh.edu.pl/">ISPAG</a>
 
         </div>
            <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
           </ul>
 
           <form class="navbar-form navbar-right" role="form">
@@ -67,8 +67,11 @@
      <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
   <div id="body">
     {% block body %}
-      <div class="content_title">
-        {% block content_title %}{% endblock %}
+      <div class="content_title"> <h1><span class="label label-success">
+         {% block content_title %}
+
+        {% endblock %}</span></h1><hr>
+
       </div>
       <div class="content">
         {% block content %}{% endblock %}
@@ -86,17 +89,17 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Baza Danych</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p> Data base with prostate cancer CT and MRI images open for download after login</p>
           <p><a class="btn btn-default" href="{% url 'project_info.views.database' %}" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Publikacje</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="{% url 'project_info.views.publications' %}" role="button">View details &raquo;</a></p>
+          <h2>Publications</h2>
+          <p>list of scintific papaers wich was publised during project development</p>
+          <p><a class="btn btn-default" href="{% url 'publications' %}" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Uczestnicy</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <h2>Contributors</h2>
+           <p>information about project contributors and contact details </p>
           <p><a class="btn btn-default" href="{% url 'project_info.views.contact' %}" role="button">View details &raquo;</a></p>
         </div>
       </div>
@@ -104,7 +107,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; ISPAG 2014</p>
       </footer>
     </div> <!-- /container -->
 
