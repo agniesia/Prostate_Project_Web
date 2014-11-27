@@ -4,7 +4,7 @@ from models import CTDataMoreAcquisitionForPatient, CTDataOneAcquisitionForPatie
 
 
 class CTDataMoreAcquisitionForPatientAdmin(admin.ModelAdmin):
-    list_display = ('link')
+    pass
 
 
 class CTDataOneAcquisitionForPatientAdmin(admin.ModelAdmin):
