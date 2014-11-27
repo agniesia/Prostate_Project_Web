@@ -4,7 +4,7 @@ from models import CTDataMoreAcquisitionForPatient, CTDataOneAcquisitionForPatie
 
 
 class CTDataMoreAcquisitionForPatientAdmin(admin.ModelAdmin):
-    exclude = ()
+    list_display = ('link')
 
 
 class CTDataOneAcquisitionForPatientAdmin(admin.ModelAdmin):

@@ -1,8 +1,5 @@
 from django.conf.urls import patterns, url, include
-from django.conf import settings
 
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.conf.urls.static import static
 
 from django.contrib import admin
 from profiles.forms import SignupFormExtra
@@ -12,6 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^project/', include('project_info.urls')),
+    url(r'^project/', include('DataBase.urls')),
     url(r'^$', 'Prostate_Project_Web.views.index', name='index'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),

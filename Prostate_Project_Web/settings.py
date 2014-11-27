@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'project_info',
     'cookielaw',
+    'DataBase',
 )
 TEMPLATE_CONTEXT_PROCESSORS =  (
     'django.contrib.auth.context_processors.auth',
