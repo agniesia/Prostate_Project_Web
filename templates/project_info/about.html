@@ -2,9 +2,10 @@
 {% load staticfiles %}
 
 {% block content_title %}
-    {{ flatpage.title }}
+     <div class="content_title"> <h1><span class="label label-success">{{flatpage.title}}</span></h1></div><hr>
+
 {% endblock %}
-{
+
 {% block content  %}
     {{ flatpage.content }}
     <img src="{% static 'img/wizualizacja_dane.png' %}" style="width: 300px;hanging-punctuation: 300px">
